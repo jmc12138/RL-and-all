@@ -1,0 +1,83 @@
+# {
+#     "env_name":"CartPole-v1",
+#     "model_name":"DQN",
+#     "model_path": "",
+#     "test_eps": 100,
+#     "test_max_steps":1e5,
+#     "learn_args":{
+#         "total_timesteps": 1e4,
+#         "progress_bar": True
+#     }
+
+# }
+
+
+
+game2048:
+    model_args:
+        policy: 'MlpPolicy'
+        learning_rate: !!float 2.3e-3
+        batch_size: 64
+        buffer_size: 100000
+        learning_starts: 1000
+        gamma: 0.99
+        target_update_interval: 10
+        train_freq: 256
+        gradient_steps: 128
+        exploration_fraction: 0.16
+        exploration_final_eps: 0.04
+        policy_kwargs: 
+            net_arch: [256, 256]
+        seed: 1412
+        verbose: 0
+        # to update in py
+        tensorboard_log: ''
+        env: ''
+
+
+
+
+CartPole-v1:
+    model_args:
+        policy: 'MlpPolicy'
+        learning_rate: !!float 2.3e-3
+        batch_size: 64
+        buffer_size: 100000
+        learning_starts: 1000
+        gamma: 0.99
+        target_update_interval: 10
+        train_freq: 256
+        gradient_steps: 128
+        exploration_fraction: 0.16
+        exploration_final_eps: 0.04
+        policy_kwargs: 
+            net_arch: [256, 256]
+        seed: 1412
+        verbose: 0
+        # to update in py
+        tensorboard_log: ''
+        env: ''
+
+
+ALE/Boxing-v5:
+    model_args:
+        policy: 'CnnPolicy'
+        learning_rate: !!float 2.3e-3
+        batch_size: 64
+        buffer_size: 100000
+        learning_starts: 1000
+        gamma: 0.99
+        target_update_interval: 10
+        train_freq: 256
+        gradient_steps: 128
+        exploration_fraction: 0.16
+        exploration_final_eps: 0.04
+        seed: 1412
+        verbose: 0
+        # to update in py
+        tensorboard_log: ''
+        env: ''
+
+
+
+  

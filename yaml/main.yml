@@ -1,0 +1,65 @@
+
+CartPole-v1:
+    make_args:
+        id: "CartPole-v1"
+    learn_args:
+        total_timesteps: !!float 1e2
+        progress_bar: True
+
+    env_name: "CartPole-v1"
+    test_eps: !!int 1_000
+    test_max_steps: !!int 10_000
+    save_freq: 0
+    # to update in py
+    save_path: ''
+    last_model_path: ''
+
+
+
+
+game2048:
+    make_args:
+        id: "game2048"
+    learn_args:
+        total_timesteps: !!float 1e2
+        progress_bar: True
+
+    env_name: "game2048"
+    test_eps: !!int 1_000
+    test_max_steps: !!int 10_000
+    save_freq: 0
+    # to update in py
+    save_path: ''
+    last_model_path: ''
+
+
+
+
+
+ALE/Boxing-v5:
+    make_args:
+        env_id: "ALE/Boxing-v5"
+        n_envs: !!int 4
+        env_kwargs:
+            mode: !!int 0  # only 0
+            difficulty: !!int 0 # 0,1,2,3
+            obs_type: 'rgb'  #  'ram','rgb','grayscale'
+            frameskip: !!int 1
+            repeat_action_probability: !!float 0
+            # full_action_space: False
+            # render_mode:  'rgb_array'  #'human'  or 'rgb_array'
+    learn_args:
+        total_timesteps: !!float 1e7
+        progress_bar: True
+    env_name: "ALE/Boxing-v5"
+    save_name: "Boxing"
+    n_stack: !!int 4
+    test_eps: !!int 5_000_0
+    test_max_steps: !!int 10_00
+    save_freq: 5_000_00
+    # to update in py
+    save_path: ''
+    last_model_path: ''
+    test_model_path: ''
+
+  
